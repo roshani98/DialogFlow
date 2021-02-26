@@ -18,15 +18,21 @@
   <packaging>war</packaging>
   <version>1.0</version>
 
-  <groupId>com.google.appengine.demos</groupId>
-  <artifactId>appengine-try-java</artifactId>
+  <groupId>com.DB.FruitSalad</groupId>
+  <artifactId>DialogFlowBackend</artifactId>
 
   <!-- Parent POM defines common plugins and properties. -->
   <parent>
-    <groupId>com.google.cloud.samples</groupId>
-    <artifactId>shared-configuration</artifactId>
-    <version>1.0.1</version>
-   </parent>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-parent</artifactId>
+    <version>2.3.9.RELEASE</version>
+  </parent>
+
+<!--  <parent>-->
+<!--    <groupId>com.google.cloud.samples</groupId>-->
+<!--    <artifactId>shared-configuration</artifactId>-->
+<!--    <version>1.0.1</version>-->
+<!--   </parent>-->
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -77,10 +83,27 @@
       <scope>test</scope>
     </dependency>
     <dependency>
-      <groupId>com.google.appengine</groupId>
-      <artifactId>appengine-api-stubs</artifactId>
-      <version>${appengine.target.version}</version>
-      <scope>test</scope>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-web</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-devtools</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.google.cloud</groupId>
+      <artifactId>google-cloud-dialogflow-cx</artifactId>
+      <version>0.5.0</version>
+    </dependency>
+    <dependency>
+      <groupId>io.springfox</groupId>
+      <artifactId>springfox-swagger2</artifactId>
+      <version>3.0.0</version>
+    </dependency>
+    <dependency>
+      <groupId>io.springfox</groupId>
+      <artifactId>springfox-boot-starter</artifactId>
+      <version>3.0.0</version>
     </dependency>
   </dependencies>
     
